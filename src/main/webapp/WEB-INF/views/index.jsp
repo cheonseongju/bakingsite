@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,21 +9,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bakingschool</title>
   <!-- favicon -->
-  <link rel="shortcut icon" href="images/favi/favicon.ico">
-  <link rel="apple-touch-icon" sizes="57x57" href="images/favi/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="images/favi/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="images/favi/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/favi/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="images/favi/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/favi/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="images/favi/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/favi/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favi/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="images/favi/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favi/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/favi/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favi/favicon-16x16.png">
-  <link rel="manifest" href="images/favi/manifest.json">
+  <link rel="shortcut icon" href="../../static/images/favi/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="../../static/images/favi/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../../static/images/favi/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../../static/images/favi/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../static/images/favi/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../../static/images/favi/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../static/images/favi/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../../static/images/favi/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../static/images/favi/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/favi/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../../static/images/favi/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../static/images/favi/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../static/images/favi/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favi/favicon-16x16.png">
+  <link rel="manifest" href="../../static/images/favi/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="images/favi/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -28,212 +31,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/header.css" type="text/css">
-  <link rel="stylesheet" href="css/footer.css" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  <script src="script/jquery-1.12.3.js"></script>
-  <script src="script/index_header.js" defer></script>
-  <script src="script/index_mainslide.js" defer></script>
+  <link rel="stylesheet" href="../../static/css/header.css" type="text/css">
+  <link rel="stylesheet" href="../../static/css/footer.css" type="text/css">
+  <link rel="stylesheet" href="../../static/css/style.css" type="text/css">
+  <script src="../../static/script/jquery-1.12.3.js"></script>
+  <script src="../../static/script/index_header.js" defer></script>
+  <script src="../../static/script/index_mainslide.js" defer></script>
 </head>
 <body>
-
-  <div class="modal">
-    <div class="modal-title">
-      현재 가장 빠른 배송 출발일
-    </div>
-    <div class="modal-body">
-      <p>
-        <span>실온제품주문</span> : 2023-05-26(금)
-      </p>
-      <p>
-        <span>냉장제품주문</span> : 2023-05-30(화)
-      </p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="top" id="tops">
-      <ul class="top-inner">
-        <li>
-          <a href="#" class="delivery-modal">
-            <img src="images/delivery_icon.png" alt="deliveryicon">
-            지금 주문하면 언제출발?
-          </a>
-        </li>
-        <li class="top-util">
-          <div class="login-wrap">
-            <a href="login.html">로그인</a>
-            <a href="#">회원가입</a>
-            <a href="basket.html" class="shopping-cart">
-              <i class="fa-solid fa-basket-shopping"></i>
-            </a>
-          </div>
-          <div class="search-wrap">
-            <input type="text" placeholder="내용을 입력해주세요.">
-            <a href="#" class="btn-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <header class="header" id="headers">
-      <div class="header-inner">
-        <div class="logo-wrap">
-          <a href="index.html" class="logo">
-            <img src="images/icon/logo.png" alt="로고">
-          </a>
-					<a href="index.html" class="logo-mobile">
-            <img src="images/icon/logo_m.png" alt="로고">
-          </a>
-        </div>
-        <nav class="main-menu">
-          <ul>
-            <li>
-              <a href="product.html" class="main-menu-item">상품</a>
-              <ul class="submenu">
-                <li>
-                  <a href="product-material.html">재료</a>
-                </li>
-                <li>
-                  <a href="product-tool.html">도구</a>
-                </li>
-                <li>
-                  <a href="product-package.html">포장</a>
-                </li>
-                <li>
-                  <a href="product-book.html">책</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="recipe.html" class="main-menu-item">레시피</a>
-              <ul class="submenu">
-                <li>
-                  <a href="recipe-yaggwa.html">약과 마카롱</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="community.html" class="main-menu-item">커뮤니티</a>
-              <ul class="submenu">
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="community-FNA.html">FnA</a></li>
-                <li><a href="#">상품후기</a></li>
-                <li><a href="community-QNA.html">QnA</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <!-- toggle sidebar -->
-        <a href="#" class="toggle-sidebar">
-          <i class="fa-solid fa-bars"></i>
-        </a>
-      </div>  
-    </header>
-    <div class="sidebar">
-      <ul>
-        <li>
-          <a href="product-material.html" class="sidebar-tit">
-            재료
-          </a>
-          <ul class="depth2">
-            <li><a href="#">버터/생크림</a></li>
-            <li><a href="#">치즈/연유/분유/기타유가공</a></li>
-            <li><a href="#">견과류/건조과일/마지판</a></li>
-            <li><a href="#">색소</a></li>
-            <li><a href="#">설탕/소금/시럽</a></li>
-            <li><a href="#">냉동생지/반제품</a></li>
-            <li><a href="#">앙금/잼/퓨레/통조림/소스</a></li>
-            <li><a href="#">향료/오일/팽창/첨가</a></li>
-            <li><a href="#">유기농</a></li>
-          </ul>
-        </li>
-        
-        <li>
-          <a href="product-tool.html" class="sidebar-tit">
-            도구
-          </a>
-          <ul class="depth2">
-            <li><a href="#">오븐팬</a></li>
-            <li><a href="#">유산지/테프론시트</a></li>
-            <li><a href="#">성형/디자인툴</a></li>
-            <li><a href="#">데코툴</a></li>
-            <li><a href="#">실리콘</a></li>
-            <li><a href="#">베이킹가전/기계</a></li>
-            <li><a href="#">측정도구</a></li>
-            <li><a href="#">빵칼/주걱/스크래퍼</a></li>
-            <li><a href="#">기타 소도구</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="product-package.html" class="sidebar-tit">
-            포장
-          </a>
-          <ul class="depth2">
-            <li><a href="#">상자</a></li>
-            <li><a href="#">디저트컵</a></li>
-            <li><a href="#">받침</a></li>
-            <li><a href="#">봉투</a></li>
-            <li><a href="#">유산지</a></li>
-            <li><a href="#">스티커/택</a></li>
-            <li><a href="#">리본/마끈/타이</a></li>
-            <li><a href="#">부자재</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="product-book.html" class="sidebar-tit">
-            책
-          </a>
-          <ul class="depth2">
-            <li><a href="#">홈베이킹</a></li>
-            <li><a href="#">제과제빵자격증</a></li>
-            <li><a href="#">전문가 이론서</a></li>
-          </ul>
-        </li>
-
-        <!-- 여기 a 태그 연결  -->
-        <li>
-          <a href="#" class="sidebar-tit">
-          레시피
-          </a>
-          <ul class="depth2">
-            <li><a href="recipe-yaggwa.html">약과 마카롱</a></li>
-            <li><a href="#">쿠키레시피</a></li>
-            <li><a href="#">케이크레시피</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="community.html" class="sidebar-tit">
-            커뮤니티
-          </a>
-          <ul class="depth2">
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">이벤트</a></li>
-            <li><a href="#">FnA</a></li>
-            <li><a href="#">상품후기</a></li>
-            <li><a href="#">QnA</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#" class="sidebar-tit">
-            마이페이지
-          </a>
-          <ul class="depth2">
-            <li><a href="#">개인정보</a></li>
-            <li><a href="#">주문</a></li>
-            <li><a href="#">반품</a></li>
-            <li><a href="#">후기</a></li>
-            <li><a href="#">문의글</a></li>
-          </ul>
-        </li>
-
-      </ul>
-    </div>
+<%@ include file="layout/header.jsp" %>
     <!-- section - 메인슬라이드 -->
     <section class="mainslide">
       <div class="mainslide-btn-wrap">
@@ -361,7 +167,7 @@
         <ul>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_01.jpg" alt="인기상품01">
+              <img src="../../static/images/bestseller/best_seller_01.jpg" alt="인기상품01">
             </a>
             <p class="title">앵커 천연버터 454g</p>
             <p class="desc">깔끔한 맛으로 앙버터에 많이 사용해요</p>
@@ -372,7 +178,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_02.jpg" alt="인기상품02">
+              <img src="../../static/images/bestseller/best_seller_02.jpg" alt="인기상품02">
             </a>
             <p class="title">그래스랜드 무염버터 454g</p>
             <p class="desc">하얗고 풍미 좋은 버터</p>
@@ -383,7 +189,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_03.jpg" alt="인기상품03">
+              <img src="../../static/images/bestseller/best_seller_03.jpg" alt="인기상품03">
             </a>
             <p class="title">롯데홈버터 450g 베이킹용무염버터</p>
             <p class="desc">최고의 가성비 풍미 좋은 버터(최대구매 20개)</p>
@@ -394,7 +200,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_04.jpg" alt="인기상품04">
+              <img src="../../static/images/bestseller/best_seller_04.jpg" alt="인기상품04">
             </a>
             <p class="title">앵커크림치즈 1kg</p>
             <p class="desc"></p>
@@ -405,7 +211,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_05.jpg" alt="인기상품05">
+              <img src="../../static/images/bestseller/best_seller_05.jpg" alt="인기상품05">
             </a>
             <p class="title">에버휩 식물성 가당 휘핑크림 1030g</p>
             <p class="desc">달달하고 고소한 꾸준히 인기많은 휘핑크림</p>
@@ -416,7 +222,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_06.jpg" alt="인기상품06">
+              <img src="../../static/images/bestseller/best_seller_06.jpg" alt="인기상품06">
             </a>
             <p class="title">온탑휘핑크림 340g(바로 사용 가능)</p>
             <p class="desc">간편한 케익만들기(3호까지 가능해요~)</p>
@@ -427,7 +233,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_07.jpg" alt="인기상품07">
+              <img src="../../static/images/bestseller/best_seller_07.jpg" alt="인기상품07">
             </a>
             <p class="title">앵커 동물성 무가당 휘핑크림 1L</p>
             <p class="desc"></p>
@@ -438,7 +244,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_08.jpg" alt="인기상품08">
+              <img src="../../static/images/bestseller/best_seller_08.jpg" alt="인기상품08">
             </a>
             <p class="title">박력밀가루 1kg(박력분)</p>
             <p class="desc">케익, 쿠키만들때 (최대 구매 10개)</p>
@@ -449,7 +255,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_09.jpg" alt="인기상품09">
+              <img src="../../static/images/bestseller/best_seller_09.jpg" alt="인기상품09">
             </a>
             <p class="title">강력밀가루 1kg(강력분)</p>
             <p class="desc">빵만들때 (최대 구매 10개)</p>
@@ -460,7 +266,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_10.jpg" alt="인기상품10">
+              <img src="../../static/images/bestseller/best_seller_10.jpg" alt="인기상품10">
             </a>
             <p class="title">네덜란드산 코코아파우더 200g</p>
             <p class="desc">유럽산 풍미좋은</p>
@@ -471,7 +277,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_11.jpg" alt="인기상품11">
+              <img src="../../static/images/bestseller/best_seller_11.jpg" alt="인기상품11">
             </a>
             <p class="title">아몬드 분말가루 200g</p>
             <p class="desc">아몬드파우더 100%</p>
@@ -482,7 +288,7 @@
           </li>
           <li class="bestseller-li">
             <a href="#">
-              <img src="images/bestseller/best_seller_12.jpg" alt="인기상품12">
+              <img src="../../static/images/bestseller/best_seller_12.jpg" alt="인기상품12">
             </a>
             <p class="title">분당 슈가파우더 500g</p>
             <p class="desc"></p>
@@ -502,7 +308,7 @@
         <ul>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_01.png" alt="신상품01">
+              <img src="../../static/images/newproduct/new_product_01.png" alt="신상품01">
             </a>
             <p class="title">로얄 바우즈만버터 400g</p>
             <p class="desc">깔끔한 맛으로 앙버터에 많이 사용해요</p>
@@ -513,7 +319,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_02.png" alt="신상품02">
+              <img src="../../static/images/newproduct/new_product_02.png" alt="신상품02">
             </a>
             <p class="title">앵커발효버터 454g</p>
             <p class="desc">프리미엄 무가염 발효버터</p>
@@ -524,7 +330,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_03.png" alt="신상품03">
+              <img src="../../static/images/newproduct/new_product_03.png" alt="신상품03">
             </a>
             <p class="title">마스카포네1L(아르보리아)</p>
             <p class="desc">낙농강국 이탈리아 아르보리아 마스카포네!</p>
@@ -535,7 +341,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_04.png" alt="신상품04">
+              <img src="../../static/images/newproduct/new_product_04.png" alt="신상품04">
             </a>
             <p class="title">페이장브레통 휘핑크림1L(동물성,무가당)</p>
             <p class="desc">프랑스산, 방부제X 방목</p>
@@ -546,7 +352,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_05.png" alt="신상품05">
+              <img src="../../static/images/newproduct/new_product_05.png" alt="신상품05">
             </a>
             <p class="title">라르사 휘핑크림1L(동물성,무가당)</p>
             <p class="desc">스페인산, 빠르고 단단한 휘핑력, 방목</p>
@@ -557,7 +363,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_06.png" alt="신상품06">
+              <img src="../../static/images/newproduct/new_product_06.png" alt="신상품06">
             </a>
             <p class="title">아티장밀가루2kg(박력마일드)</p>
             <p class="desc"></p>
@@ -568,7 +374,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_07.png" alt="신상품07">
+              <img src="../../static/images/newproduct/new_product_07.png" alt="신상품07">
             </a>
             <p class="title">강력분1kg(아바론)</p>
             <p class="desc"></p>
@@ -579,7 +385,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_08.png" alt="신상품08">
+              <img src="../../static/images/newproduct/new_product_08.png" alt="신상품08">
             </a>
             <p class="title">코코넛꽃즙분말500g (코코넛슈가)</p>
             <p class="desc">자연 그대로의 풍부한 단 맛</p>
@@ -590,7 +396,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_09.png" alt="신상품09">
+              <img src="../../static/images/newproduct/new_product_09.png" alt="신상품09">
             </a>
             <p class="title">반죽기 매트(소음/진동 방지)</p>
             <p class="desc">층간 소음 걱정 끝~</p>
@@ -601,7 +407,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_10.png" alt="신상품10">
+              <img src="../../static/images/newproduct/new_product_10.png" alt="신상품10">
             </a>
             <p class="title">실팝코팅 바통휘낭시에틀14구</p>
             <p class="desc">혁신적인 실팝(SILPAP-T) 코팅 기술력</p>
@@ -612,7 +418,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_11.png" alt="신상품11">
+              <img src="../../static/images/newproduct/new_product_11.png" alt="신상품11">
             </a>
             <p class="title">오트리 청크잼1kg(딸기, 복숭아, 사과)</p>
             <p class="desc">부드러운 과일잼에 풍부한 과육량</p>
@@ -623,7 +429,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_12.png" alt="신상품12">
+              <img src="../../static/images/newproduct/new_product_12.png" alt="신상품12">
             </a>
             <p class="title">판젤라틴(1kg,약500장)</p>
             <p class="desc">무스케익,젤리만들때</p>
@@ -634,7 +440,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_13.jpg" alt="신상품13">
+              <img src="../../static/images/newproduct/new_product_13.jpg" alt="신상품13">
             </a>
             <p class="title">토끼틀 12구</p>
             <p class="desc"></p>
@@ -645,7 +451,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_14.jpg" alt="신상품14">
+              <img src="../../static/images/newproduct/new_product_14.jpg" alt="신상품14">
             </a>
             <p class="title">바니프뤼 바닐라 페이스트 100g</p>
             <p class="desc">바닐라빈이 들어있는</p>
@@ -656,7 +462,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_15.jpg" alt="신상품15">
+              <img src="../../static/images/newproduct/new_product_15.jpg" alt="신상품15">
             </a>
             <p class="title">EGS 무선 핸드믹서</p>
             <p class="desc">무선으로 즐기는</p>
@@ -667,7 +473,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_16.jpg" alt="신상품16">
+              <img src="../../static/images/newproduct/new_product_16.jpg" alt="신상품16">
             </a>
             <p class="title">클래식 막대과자만들기세트(11cm)</p>
             <p class="desc">심플하고 고급스러운 빼빼로</p>
@@ -678,7 +484,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_17.jpg" alt="신상품17">
+              <img src="../../static/images/newproduct/new_product_17.jpg" alt="신상품17">
             </a>
             <p class="title">스트로베리 막대과자만들기세트(11cm)</p>
             <p class="desc">딸기 다이스를 넣어 상큼하게</p>
@@ -689,7 +495,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_18.jpg" alt="신상품18">
+              <img src="../../static/images/newproduct/new_product_18.jpg" alt="신상품18">
             </a>
             <p class="title">아메리칸 와플믹스 400g</p>
             <p class="desc">어디서든 즐겨먹는 프리미엄 와플</p>
@@ -700,7 +506,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_19.jpg" alt="신상품19">
+              <img src="../../static/images/newproduct/new_product_19.jpg" alt="신상품19">
             </a>
             <p class="title">당근케이크믹스 500g</p>
             <p class="desc">국내산 당근 14%</p>
@@ -711,7 +517,7 @@
           </li>
           <li class="newproduct-li">
             <a href="#">
-              <img src="images/newproduct/new_product_20.jpg" alt="신상품20">
+              <img src="../../static/images/newproduct/new_product_20.jpg" alt="신상품20">
             </a>
             <p class="title">도너츠 틀(3종) 6구</p>
             <p class="desc">도너츠 모양의 마들렌을 구울 수 있는</p>
@@ -730,30 +536,7 @@
       </a>
     </div>
     <!-- footer -->
-    <footer id="footers">
-      <div class="footer-inner">
-        <ul class="policy">
-          <li>
-            <a href="#">개인정보취급방침</a>
-          </li>
-          <li>
-            <a href="#">회원약관</a>
-          </li>
-          <li>
-            <a href="#">공정위확인</a>
-          </li>
-          <li>
-            <a href="#">오시는길</a>
-          </li>
-        </ul>
-        <ul class="customer-service">
-          <li>고객센터</li>
-          <li class="tel">02-354-3022</li>
-          <li>평일: 9:30 ~ 17:00; 토요일 9:30 ~ 14:00</li>
-          <li>일요일, 공휴일 휴무</li>
-        </ul>
-      </div>
-    </footer>
+<%@ include file="layout/header.jsp" %>
   </div>
   
   <script>

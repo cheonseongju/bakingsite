@@ -1,4 +1,4 @@
-package com.example.BakingSite;
+package com.example.baking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
