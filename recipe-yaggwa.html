@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe - 약과마카롱</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/favi/favicon.ico">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <!--CSS-->
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/recipe.css">
+  <link rel="stylesheet" href="css/recipe_tab_768.css">
+  <link rel="stylesheet" href="css/recipe_mobile_500.css">
+  <link rel="stylesheet" href="css/recipe_mobile_320.css">
+  <script src="script/jquery-1.12.3.js"></script>
+  <script src="script/index_header.js" defer></script>
+  <script src="script/recipe.js" defer></script>
+</head>
+
+<body>
+  <header id="top">
+    <nav class="login">
+      <ul>
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+      <form action="" method="post">
+      <input type="text" name="search">
+      <button>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      </form>
+    </nav>
+    <nav class="menu">
+      <div class="menu-box">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="로고">
+        </a>
+        <ul id="menu-slide">
+          <li><a href="product.html">상품</a>
+            <ul id="submenu">
+              <li><a href="product-material.html">재료</a>
+                <ul id="subsubmenu">
+                  <li><a href="#">버터/생크림</a></li>
+                  <li><a href="#">치즈/연유/분유/기타유가공</a></li>
+                  <li><a href="#">견과류/건조과일/마지판</a></li>
+                  <li><a href="#">색소</a></li>
+                  <li><a href="#">설탕/소금/시럽</a></li>
+                  <li><a href="#">냉동생지/반제품</a></li>
+                  <li><a href="#">앙금/잼/퓨레/통조림/소스</a></li>
+                  <li><a href="#">향료/오일/팽창/첨가</a></li>
+                  <li><a href="#">유기농</a></li>
+                </ul>
+              </li>
+              <li><a href="product-tool.html">도구</a>
+                <ul id="subsubmenu">
+                  <li><a href="#">오븐팬</a></li>
+                  <li><a href="#">유산지/테프론시트</a></li>
+                  <li><a href="#">성형/디자인툴</a></li>
+                  <li><a href="#">데코툴</a></li>
+                  <li><a href="#">실리콘</a></li>
+                  <li><a href="#">베이킹가전/기계</a></li>
+                  <li><a href="#">측정도구</a></li>
+                  <li><a href="#">빵칼/주걱/스크래퍼</a></li>
+                  <li><a href="#">기타 소도구</a></li>
+                </ul>
+              </li>
+              <li><a href="product-package.html">포장</a>
+                <ul id="subsubmenu">
+                  <li><a href="#">상자</a></li>
+                  <li><a href="#">디저트컵</a></li>
+                  <li><a href="#">받침</a></li>
+                  <li><a href="#">봉투</a></li>
+                  <li><a href="#">유산지</a></li>
+                  <li><a href="#">스티커/택</a></li>
+                  <li><a href="#">리본/마끈/타이</a></li>
+                  <li><a href="#">부자재</a></li>
+                </ul>
+              </li>
+              <li><a href="product-book.html">책</a>
+                <ul id="subsubmenu">
+                  <li><a href="#">홈베이킹</a></li>
+                  <li><a href="#">제과제빵자격증</a></li>
+                  <li><a href="#">전문가 이론서</a></li>
+                </ul>
+              </li>
+              <li><a href="#">테마별</a>
+                <ul id="subsubmenu">
+                  <li><a href="#">구움과자</a></li>
+                  <li><a href="#">빵</a></li>
+                  <li><a href="#">초콜릿</a></li>
+                  <li><a href="#">한과/양갱</a></li>
+                  <li><a href="#">젤리플라워</a></li>
+                  <li><a href="#">슈가크래프트</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="recipe.html">레시피</a>
+            <ul id="submenu">
+              <li><a href="recipe-yaggwa.html">약과 마카롱</a></li>
+            </ul>
+          </li>
+          <li><a href="community.html">커뮤니티</a>
+            <ul id="submenu">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">FnA</a></li>
+              <li><a href="#">상품후기</a></li>
+              <li><a href="#">QnA</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul id="toggleBtn">
+          <li>
+            <i class="fa-solid fa-bars"></i>
+            <div class="toggle">
+              <ul class="toggleView">
+                <li><a href="product-material.html">재료</a>
+                  <ul>
+                    <li><a href="#">버터/생크림</a></li>
+                    <li><a href="#">치즈/연유/분유/기타유가공</a></li>
+                    <li><a href="#">견과류/건조과일/마지판</a></li>
+                    <li><a href="#">색소</a></li>
+                    <li><a href="#">설탕/소금/시럽</a></li>
+                    <li><a href="#">냉동생지/반제품</a></li>
+                    <li><a href="#">앙금/잼/퓨레/통조림/소스</a></li>
+                    <li><a href="#">향료/오일/팽창/첨가</a></li>
+                    <li><a href="#">유기농</a></li>
+                  </ul>
+                </li>
+    
+                <li><a href="product-tool.html">도구</a>
+                  <ul>
+                    <li><a href="#">오븐팬</a></li>
+                    <li><a href="#">유산지/테프론시트</a></li>
+                    <li><a href="#">성형/디자인툴</a></li>
+                    <li><a href="#">데코툴</a></li>
+                    <li><a href="#">실리콘</a></li>
+                    <li><a href="#">베이킹가전/기계</a></li>
+                    <li><a href="#">측정도구</a></li>
+                    <li><a href="#">빵칼/주걱/스크래퍼</a></li>
+                    <li><a href="#">기타 소도구</a></li>
+                  </ul>
+                </li>
+    
+                <li><a href="product-package.html">포장</a>
+                  <ul>
+                    <li><a href="#">상자</a></li>
+                    <li><a href="#">디저트컵</a></li>
+                    <li><a href="#">받침</a></li>
+                    <li><a href="#">봉투</a></li>
+                    <li><a href="#">유산지</a></li>
+                    <li><a href="#">스티커/택</a></li>
+                    <li><a href="#">리본/마끈/타이</a></li>
+                    <li><a href="#">부자재</a></li>
+                  </ul>
+                </li>
+    
+                <li><a href="product-book.html">책</a>
+                  <ul>
+                    <li><a href="#">홈베이킹</a></li>
+                    <li><a href="#">제과제빵자격증</a></li>
+                    <li><a href="#">전문가 이론서</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="recipe.html">레시피</a>
+                  <ul>
+                    <li><a href="recipe-yaggwa.html">약과 마카롱</a></li>
+                    <li><a href="#">쿠키레시피</a></li>
+                    <li><a href="#">케이크레시피</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="community.html">커뮤니티</a>
+                  <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">FnA</a></li>
+                    <li><a href="#">상품후기</a></li>
+                    <li><a href="#">QnA</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="#">마이페이지</a>
+                  <ul>
+                    <li><a href="#">개인정보</a></li>
+                    <li><a href="#">주문</a></li>
+                    <li><a href="#">반품</a></li>
+                    <li><a href="#">후기</a></li>
+                    <li><a href="#">문의글</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--지금주문언제출발-->
+  <div class="delivery">
+    <div class="delivery_p">
+      <p>지금 출발하면</p>
+      <p>언제 도착?</p>
+    </div>
+    <div class="delivery_inner">
+      <img src="images/delivery_icon.png">
+    </div>
+  </div>
+
+  <hr>
+  </div>
+  <!--선택-->
+  <div class="choose">
+    <h3>레시피</h3>
+    <ul>
+      <li>케이크</li>
+      <li>쿠 키</li>
+      <li>빵</li>
+      <li>초콜릿</li>
+      <li>떡 / 한과</li>
+      <li>구운과자</li>
+    </ul>
+  </div>
+  <hr>
+
+  <div id="contanier">
+
+    <!--표지/닉네임-->
+    <div class="show">
+      <div class="info">
+        <span>RedMoon ioi5</span>
+        <span>2023-05-02 14:11</span>
+      </div>
+      <div class="thumpnail">
+        <h2>약과마카롱 도전 [마카롱 만들기]</h2>
+        <img src="images/recipe/yaggwa_macaron/thumbnail_yaggwa_macaron.jpg" alt="약과마카롱_썸네일">
+      </div>
+    </div>
+
+    <!--레시피에 사용된 제품-->
+    <div class="product">
+      <p class="title">
+        - 레시피에 사용된 제품 &nbsp;
+        <i class="fa-regular fa-square-caret-down" id="down"></i>
+        <i class="fa-regular fa-square-caret-up" id="up"></i>
+      </p>
+      <div class="pro_scroll">
+        <div class="pro_wrap">
+          <img class="pro_img" src="images/material/yaggwa.jpg" alt="약과">
+          <p>약과</p>
+          <div class="pro_sub-wrap">
+            <input id="result1" type="text" value="0">
+            <div class="sort">
+              <i onclick="count1(1)" class="fa-solid fa-sort-up"></i>
+              <i onclick="count1(0)" class="fa-solid fa-sort-down"></i>
+            </div>
+            <button>담기</button>
+          </div>
+          <div class="price">
+            <p class="ori_price"><del>6800</del></p>
+            <p class="sale_price">4800</p>
+          </div>
+        </div>
+        <div class="pro_wrap">
+          <img class="pro_img" src="images/material/suga.jpg" alt="흰설탕">
+          <p>하얀 설탕</p>
+          <div class="pro_sub-wrap">
+            <input id="result2" type="text" value="0">
+            <div class="sort">
+              <i onclick="count2(1)" class="fa-solid fa-sort-up"></i>
+              <i onclick="count2(0)" class="fa-solid fa-sort-down"></i>
+            </div>
+            <button>담기</button>
+          </div>
+          <div class="price">
+            <p class="ori_price"><del>2400</del></p>
+            <p class="sale_price">1880</p>
+          </div>
+        </div>
+        <div class="pro_wrap">
+          <img class="pro_img" src="images/material/vanillaoil.jpg" alt="바닐라 오일">
+          <p>바닐라 오일</p>
+          <div class="pro_sub-wrap">
+            <input id="result3" type="text" value="0">
+            <div class="sort">
+              <i onclick="count3(1)" class="fa-solid fa-sort-up"></i>
+              <i onclick="count3(0)" class="fa-solid fa-sort-down"></i>
+            </div>
+            <button>담기</button>
+          </div>
+          <div class="price">
+            <p class="sale_price">5400</p>
+          </div>
+        </div>
+        <div class="pro_wrap">
+          <img class="pro_img" src="images/material/almond.jpg" alt="아몬드분말">
+          <p>아몬드 분말</p>
+          <div class="pro_sub-wrap">
+            <input id="result4" type="text" value="0">
+            <div class="sort">
+              <i onclick="count4(1)" class="fa-solid fa-sort-up"></i>
+              <i onclick="count4(0)" class="fa-solid fa-sort-down"></i>
+            </div>
+            <button>담기</button>
+          </div>
+          <div class="price">
+            <p class="ori_price"><del>4400</del></p>
+            <p class="sale_price">3400</p>
+          </div>
+        </div>
+        <div class="pro_wrap">
+          <img class="pro_img" src="images/material/sugapowder.jpg" alt="슈가 파우더">
+          <p>슈가 파우더</p>
+          <div class="pro_sub-wrap">
+            <input id="result5" type="text" value="0">
+            <div class="sort">
+              <i onclick="count5(1)" class="fa-solid fa-sort-up"></i>
+              <i onclick="count5(0)" class="fa-solid fa-sort-down"></i>
+            </div>
+            <button>담기</button>
+          </div>
+          <div class="price">
+            <p class="ori_price"><del>2400</del></p>
+            <p class="sale_price">1880</p>
+          </div>
+        </div>
+        <div class="pro_wrap">
+          <img class="pro_img" src="images/material/cocoa.jpg" alt="코코아 파우더">
+          <p>코코아 파우더</p>
+          <div class="pro_sub-wrap">
+            <input id="result6" type="text" value="0">
+            <div class="sort">
+              <i onclick="count6(1)" class="fa-solid fa-sort-up"></i>
+              <i onclick="count6(0)" class="fa-solid fa-sort-down"></i>
+            </div>
+            <button>담기</button>
+          </div>
+          <div class="price">
+            <p class="ori_price"><del>9200</del></p>
+            <p class="sale_price">7600</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--레시피 내용-->
+    <div class="contents">
+      <p>요즘 유행하는 <i><b>약과 디저트</b></i></p>
+      <p>약과쿠키에 이어서 (약과+마카롱)<i><b>약과롱</b></i>으로 돌아왔습니다!ㅋㅋㅋ</p>
+      <p>홈베이킹으로 간단하게 만들어볼까요?</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_1.jpg">
+      <p>깨끗한 볼에 흰자와 설탕, 바닐라오일을 넣고 중속으로 휘핑해주세요</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_2.jpg">
+      <p>요렇게 뿔이 살짝 휘는 머랭을 만들어줍니다</p>
+      <p><i>+저속으로 1분 휘핑해서 잔기포를 없애주세요</i></p>
+      <img src="images/recipe/yaggwa_macaron/recipe_3.jpg">
+      <p>모든 가루류를 체 쳐서 넣어주세요</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_4.jpg">
+      <p>주걱으로 쉐킷쉐킷</p>
+      <p>*초반에는 주걱의 날을 세워서 섞다가,</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_5.jpg">
+      <p>재료가 다 섞이면 주걱을 눕혀서 마카로나쥬 해주세요</p>
+      <p><i><b>*마카로나쥬란?</b></i></p>
+      <p>반죽을 폈다 오므리길 반복하며 기포를 죽이는 작업이에용</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_6.jpg">
+      <p><small>(쥬르르륵)</small></p>
+      <p>계단처럼 접히는 농도를 만들어주세요</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_7.jpg">
+      <p><small>(짤주머니 + 원형깍지 장착)</small></p>
+      <p>베이킹시트에 팬닝해줍니다</p>
+      <p>이때 젤 중요한거!</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_8.jpg">
+      <p>약과보다 더 큰 사이즈로 짜주세요</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_9.jpg">
+      <p>표면에 막이 생길 때까지실온에서 1시간 이상 말려줍니다</p>
+      <p><i>" 하지만 저는 성격이 급해서 걍 빨리 구워버리고 말았죠ㅋㅋㅋ "</i></p>
+      <p><i><b>그 결과..</b></i></p>
+      <img src="images/recipe/yaggwa_macaron/recipe_10.jpg">
+      <p><small>(150도에 15분 굽굽)</small></p>
+      <p>쭈굴쭈굴해진 망카롱 등장!</p>
+      <p>ㅠㅠㅠㅠㅠ</p>
+      <p>우워어어어ㅓ엉</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_11.jpg">
+      <p>현타 제대로 왔구요..</p>
+      <p>ㅋ ㅋ ㅋ ㅋ</p>
+      <p>이렇게 크기가 큰 마카롱은</p>
+      <p>평소보다 더 말린 후에 구워야해요</p>
+      <p><i>"하지만 전 성격이 급해서리.."</i></p>
+      <p>떼잉 쯧</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_12.jpg">
+      <p>하지만 오늘은 괜찮아요! 약과로 가리면 되거든요ㅋ ㅋ ㅋ ㅋ ㅋ</p>
+      <p>꼬끄가 뜨거울 때 조청으로 붙여줍니다</p>
+      <div>
+        <img src="images/recipe/yaggwa_macaron/recipe_13-1.jpg">
+        <img src="images/recipe/yaggwa_macaron/recipe_13-2.jpg">
+      </div>
+      <p><small>핑크색인 이유는 딸기맛 크림치즈여서</small></p>
+      <p>크림 만들어볼게용 크림치즈를 볼에 풀어서 짤주머니에 담아주세요</p>
+      <p>(약과랑 마카롱이 달아서 따로 설탕첨가는 안했어요)</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_14.jpg">
+      <p>마카롱 사이에 샌드해줍니다</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_15.jpg">
+      <p><i>" 저는 마카롱 만들 때 이 순간이 젤 좋더라구요? "</i></p>
+      <p><b>It's 몽타쥬 타임 >_< </b>
+      </p>
+      <img src="images/recipe/yaggwa_macaron/recipe_16.jpg">
+      <p>조청까지 야무지게 발라주면</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_17.jpg">
+      <p>약과롱 완성이에요!!</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_18.jpg">
+      <p>사진으로는 잘 안 담기는 윤기..!</p>
+      <p>💖아래 영상을 확인해주세요💖</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_19.jpg">
+      <p><b>녜?</b></p>
+      <p>약과+마카롱이라 달기만 할 것 같다구요?</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_20.jpg">
+      <p>놉!</p>
+      <p>딸기 크림치즈가 상콤하게 단 맛을 잡아줘요</p>
+      <p>여러분, 상큼+스위트 조합은 뭐다?!</p>
+      <p>👇👇👇</p>
+      <img src="images/recipe/yaggwa_macaron/recipe_21.jpg">
+      <p>무조건 맛있는거!!! >_< </p>
+          <img src="images/recipe/yaggwa_macaron/recipe_22.jpg">
+          <p>저는 이 특유의 꾸덕쫀득한 식감이 너무 좋더라구요</p>
+          <img src="images/recipe/yaggwa_macaron/recipe_23.jpg">
+          <p><i>아 포스팅 중에도 또 먹고싶네요ㅋㅋ</i></p>
+          <img src="images/recipe/yaggwa_macaron/recipe_24.jpg">
+          <p>K-약과 디저트, 다음엔 뭐가 유행할까요?</p>
+          <p>👇👇👇</p>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/C9KvSJ467NU" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+    </div>
+
+    <!--댓글창-->
+    <div class="comment">
+      <div class="com_wrap">
+        <input type="text" value="댓글을 입력해주세요">
+        <i class="fa-regular fa-paper-plane"></i>
+      </div>
+      <div class="com_sub-wrap">
+        <p>사용자 닉네임</p>
+        <p class="com_text">사용자가 남긴 댓글입니다.</p>
+        <p class="date">2023.05.03 10:19</p>
+        <button>댓글</button>
+        <button class="heart">
+          <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+          0
+        </button>
+      </div>
+      <hr>
+      <div class="com_sub-wrap">
+        <p>사용자 닉네임</p>
+        <p class="com_text">사용자가 남긴 댓글입니다.
+          <br>사용자가 남긴 댓글입니다.
+        </p>
+        <p class="date">2023.05.03 10:19</p>
+        <button>댓글</button>
+        <button class="heart">
+          <i class="fa-solid fa-heart" style="color: #ff0000;"></i>
+          0
+        </button>
+      </div>
+    </div>
+
+  </div>
+</body>
+<!-- footer -->
+<footer id="footers">
+  <div class="footer-inner">
+    <ul class="policy">
+      <li>
+        <a href="#">개인정보취급방침</a>
+      </li>
+      <li>
+        <a href="#">회원약관</a>
+      </li>
+      <li>
+        <a href="#">공정위확인</a>
+      </li>
+      <li>
+        <a href="#">오시는길</a>
+      </li>
+    </ul>
+    <ul class="customer-service">
+      <li>고객센터</li>
+      <li class="tel">02-354-3022</li>
+      <li>평일: 9:30 ~ 17:00; 토요일 9:30 ~ 14:00</li>
+      <li>일요일, 공휴일 휴무</li>
+    </ul>
+  </div>
+</footer>
+
+</html>

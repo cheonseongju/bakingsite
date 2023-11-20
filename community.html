@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커뮤니티</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/favi/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favi/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favi/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favi/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favi/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favi/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favi/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favi/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favi/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favi/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favi/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favi/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favi/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favi/favicon-16x16.png">
+  <link rel="manifest" href="images/favi/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favi/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/community.css" type="text/css">
+  <link rel="stylesheet" href="css/header.css" type="text/css">
+  <link rel="stylesheet" href="css/footer.css" type="text/css">
+  <script src="script/jquery-1.12.3.js"></script>
+  <script src="script/index_header.js" defer></script>
+  <script src="script/community.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 헤더 -->
+    <div class="top" id="tops">
+      <ul class="top-inner">
+        <li>
+          <a href="#" class="delivery-modal">
+            <img src="images/delivery_icon.png" alt="deliveryicon">
+            지금 주문하면 언제출발?
+          </a>
+        </li>
+        <li class="top-util">
+          <div class="login-wrap">
+            <a href="login.html">로그인</a>
+            <a href="#">회원가입</a>
+            <a href="basket.html" class="shopping-cart">
+              <i class="fa-solid fa-basket-shopping"></i>
+            </a>
+          </div>
+          <div class="search-wrap">
+            <input type="text" placeholder="내용을 입력해주세요.">
+            <a href="#" class="btn-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <header class="header" id="headers">
+      <div class="header-inner">
+        <div class="logo-wrap">
+          <a href="index.html" class="logo">
+            <img src="images/icon/logo.png" alt="로고">
+          </a>
+        </div>
+        <nav class="main-menu">
+          <ul>
+            <li>
+              <a href="product.html" class="main-menu-item">상품</a>
+              <ul class="submenu">
+                <li>
+                  <a href="product-material.html">재료</a>
+                </li>
+                <li>
+                  <a href="product-tool.html">도구</a>
+                </li>
+                <li>
+                  <a href="product-package.html">포장</a>
+                </li>
+                <li>
+                  <a href="product-book.html">책</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="recipe.html" class="main-menu-item">레시피</a>
+              <ul class="submenu">
+                <li>
+                  <a href="recipe-yaggwa.html">약과 마카롱</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="community.html" class="main-menu-item">커뮤니티</a>
+              <ul class="submenu">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="community-FNA.html">FnA</a></li>
+                <li><a href="#">상품후기</a></li>
+                <li><a href="community-QNA.html">QnA</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- toggle sidebar -->
+        <a href="#" class="toggle-sidebar">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </div>  
+    </header>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="product-material.html" class="sidebar-tit">
+            재료
+          </a>
+          <ul class="depth2">
+            <li><a href="#">버터/생크림</a></li>
+            <li><a href="#">치즈/연유/분유/기타유가공</a></li>
+            <li><a href="#">견과류/건조과일/마지판</a></li>
+            <li><a href="#">색소</a></li>
+            <li><a href="#">설탕/소금/시럽</a></li>
+            <li><a href="#">냉동생지/반제품</a></li>
+            <li><a href="#">앙금/잼/퓨레/통조림/소스</a></li>
+            <li><a href="#">향료/오일/팽창/첨가</a></li>
+            <li><a href="#">유기농</a></li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="product-tool.html" class="sidebar-tit">
+            도구
+          </a>
+          <ul class="depth2">
+            <li><a href="#">오븐팬</a></li>
+            <li><a href="#">유산지/테프론시트</a></li>
+            <li><a href="#">성형/디자인툴</a></li>
+            <li><a href="#">데코툴</a></li>
+            <li><a href="#">실리콘</a></li>
+            <li><a href="#">베이킹가전/기계</a></li>
+            <li><a href="#">측정도구</a></li>
+            <li><a href="#">빵칼/주걱/스크래퍼</a></li>
+            <li><a href="#">기타 소도구</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="product-package.html" class="sidebar-tit">
+            포장
+          </a>
+          <ul class="depth2">
+            <li><a href="#">상자</a></li>
+            <li><a href="#">디저트컵</a></li>
+            <li><a href="#">받침</a></li>
+            <li><a href="#">봉투</a></li>
+            <li><a href="#">유산지</a></li>
+            <li><a href="#">스티커/택</a></li>
+            <li><a href="#">리본/마끈/타이</a></li>
+            <li><a href="#">부자재</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="product-book.html" class="sidebar-tit">
+            책
+          </a>
+          <ul class="depth2">
+            <li><a href="#">홈베이킹</a></li>
+            <li><a href="#">제과제빵자격증</a></li>
+            <li><a href="#">전문가 이론서</a></li>
+          </ul>
+        </li>
+
+        <!-- 여기 a 태그 연결  -->
+        <li>
+          <a href="#" class="sidebar-tit">
+          레시피
+          </a>
+          <ul class="depth2">
+            <li><a href="recipe-yaggwa.html">약과 마카롱</a></li>
+            <li><a href="#">쿠키레시피</a></li>
+            <li><a href="#">케이크레시피</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="community.html" class="sidebar-tit">
+            커뮤니티
+          </a>
+          <ul class="depth2">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">FnA</a></li>
+            <li><a href="#">상품후기</a></li>
+            <li><a href="#">QnA</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="sidebar-tit">
+            마이페이지
+          </a>
+          <ul class="depth2">
+            <li><a href="#">개인정보</a></li>
+            <li><a href="#">주문</a></li>
+            <li><a href="#">반품</a></li>
+            <li><a href="#">후기</a></li>
+            <li><a href="#">문의글</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- 메인 슬라이드 -->
+    <div class="slideshow-container">
+      <div class="mySlideDiv fade active">
+        <img src="images/community-main-slide/image slider1.png" width="100%">
+      </div>
+      <div class="mySlideDiv fade">
+        <img src="images/community-main-slide/image slider2.png" width="100%">
+      </div>
+      <div class="mySlideDiv fade">
+        <img src="images/community-main-slide/image slider3.png" width="100%">
+      </div>
+      <div class="mySlideDiv fade">
+        <img src="images/community-main-slide/image slider4.png" width="100%">
+      </div>
+      <a class="prev" onclick="prevSlide()">&#10094;</a>
+      <a class="next" onclick="nextSlide()">&#10095;</a>
+    </div>
+    <!-- 하단 메뉴바 & 안내문구 -->
+    <section class="sub-menu">
+      <div class="sub-menu-bar">
+        <ul class="sub-menu-bar-t">
+          <li data-tab="menu1" id="menu1"><a href="#">공지사항</a></li>
+          <li data-tab="menu2" id="menu2"><a href="#">이벤트</a></li>
+          <li data-tab="menu3" id="menu3"><a href="#">FnA</a></li>
+          <li data-tab="menu4" id="menu4"><a href="#">상품후기</a></li>
+          <li data-tab="menu5" id="menu5"><a href="#">QnA</a></li>
+        </ul>
+      </div>
+      <div class="sub-menu-gueid">
+        <ul>
+          <li class="sub-menu-gueid-p active">공지사항<span>상품 배송 일정과 각종 사항에 대한 안내를 드립니다.</span></li>
+          <li class="sub-menu-gueid-p">이벤트<span>이달의 신규 이벤트를 확인하세요.</span> </li>
+          <li class="sub-menu-gueid-p">FnA<span>자주 묻는 질문과 답변입니다.</span></li>
+          <li class="sub-menu-gueid-p">상품후기<span>고객 상품 후기를 추천 순으로 확인하세요.</span></li>
+          <li class="sub-menu-gueid-p">QnA<span>배송과 상품 문의에 대해 자세히 안내해 드릴께요.</span></li>
+        </ul>
+      </div>
+    </section>
+    <!-- 공지사항 세부내용 -->
+    <section class="notice-content">
+      <div class="notice-content-butten">
+        <a href="#"><button>목록</button></a>
+        <a href="#"><button>글쓰기</button></a>
+      </div>
+      <div class="notice-content-wrap">
+        <div class="notice-content-head">[필독]5월 택배 일정</div>
+        <span>
+          <p class="notice-content-name">작성자:운영자</p>
+          <p class="notice-content-date">작성일:2023.05.01</p>
+          <p class="notice-content-main">안녕하세요. 5월 택배 일정을 공유드립니다. 배송에 착오 없으시기 바랍니다.</p>
+        </span>
+      </div>
+      <a href="#"><div class="notice-content-mobile-sub">목록</div></a>
+
+    </section>
+    <!-- 공지사항 목록 -->
+    <section class="notice-list">
+      <div class="notice-list-wrap">
+        <a href="#"><button>글쓰기</button></a>
+        <!-- pc 검색창 활성화시  -->
+        <form class="notice-list-search">
+          <input type="radio" class="radio">제목
+          <input type="radio" class="radio">이름
+          <input type="radio" class="radio">내용
+          <p class="serch-tet-img">
+            <input type="text" class="textbox">
+            <input type="image" class="imgbox" src="images/icon/search_icon.png" width="16px"
+              height="14px">
+          </p>
+        </form>
+
+        <!-- 모바일 검색창 활성화시 -->
+        <div class="mobile-notice-list-search">
+          <select name="opt1">
+            <option value="name">이름</option>
+            <option value="title">제목</option>
+            <option value="content">내용</option>
+          </select>
+          <input type="text" class="textbox">
+          <input type="submit" value="검색">
+        </div>
+      </div>
+      <!-- 공지사항 테이블 -->
+      <div class="notice-list-table">
+        <div class="notice-list-table-head">
+          <div class="num">번호</div>
+          <div class="tit">제목</div>
+          <div class="write">작성자</div>
+          <div class="date">작성일</div>
+          <div class="view">조회</div>
+        </div>
+        <div class="notice-list-table-body">
+          <div class="item">
+            <div class="num">13</div>
+            <div class="tit">
+              <a href="#">[필독] 사은품 안내드립니다.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2022.12.31</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2022.12.31</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">12</div>
+            <div class="tit">
+              <a href="#">[필독] 배송안내(토요일도 택배 출고 및 배송진행합니다!)</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.05.15</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.05.15</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">11</div>
+            <div class="tit">
+              <a href="#">[필독] 사용후기 적립금 제도.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2022.12.31</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2022.12.31</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">10</div>
+            <div class="tit">
+              <a href="#">[공지] 5월 배송 일정 안내 드립니다.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.05.01</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.05.01</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">09</div>
+            <div class="tit">
+              <a href="#">[공지] 4월 우수후기 당첨자 안내.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.05.01</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.05.01</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">08</div>
+            <div class="tit">
+              <a href="#">[공지] 4월 배송 일정 안내 드립니다.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.04.01</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.04.01</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">07</div>
+            <div class="tit">
+              <a href="#">[공지] 3월 우수후기 당첨자 안내.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.04.01</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.04.01</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">06</div>
+            <div class="tit">
+              <a href="#">[공지] 3월 배송 일정 안내 드립니다.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.03.01</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.03.01</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">05</div>
+            <div class="tit">
+              <a href="#">[공지] 2월 우수후기 당첨자 안내.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.02.15</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.03.01</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">04</div>
+            <div class="tit">
+              <a href="#">[공지] 2월 배송 일정 안내 드립니다.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.02.01</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.02.03</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">03</div>
+            <div class="tit">
+              <a href="#">[공지] 1월 우수후기 당첨자 안내.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.02.15</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.02.03</div>
+            <div class="view">112</div>
+          </div>
+          <div class="item">
+            <div class="num">02</div>
+            <div class="tit">
+              <a href="#">[필독] 설연휴 배송일정 안내 드립니다.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.01.20</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.01.20</div>
+            <div class="view">181</div>
+          </div>
+          <div class="item">
+            <div class="num">01</div>
+            <div class="tit">
+              <a href="#">[공지] 1월 배송 일정 안내 드립니다.</a>
+              <span class="mobile-sub">
+                <div class="m-write">운영자 &nbsp;|&nbsp;</div>
+                <div class="m-date">2023.01.02</div>
+              </span>
+            </div>
+            <div class="write">운영자</div>
+            <div class="date">2023.01.02</div>
+            <div class="view">11</div>
+          </div>
+        </div>
+        <div class="notice-list-btnlist">
+          <ul>
+            <li>-</li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li>-</li>
+          </ul>
+        </div>
+    </section>
+    <!-- 푸터 -->
+    <footer id="footers">
+      <div class="footer-inner">
+        <ul class="policy">
+          <li>
+            <a href="#">개인정보취급방침</a>
+          </li>
+          <li>
+            <a href="#">회원약관</a>
+          </li>
+          <li>
+            <a href="#">공정위확인</a>
+          </li>
+          <li>
+            <a href="#">오시는길</a>
+          </li>
+        </ul>
+        <ul class="customer-service">
+          <li>고객센터</li>
+          <li class="tel">02-354-3022</li>
+          <li>평일: 9:30 ~ 17:00; 토요일 9:30 ~ 14:00</li>
+          <li>일요일, 공휴일 휴무</li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

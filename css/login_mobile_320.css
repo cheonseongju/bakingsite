@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* Noto Sans KR, Gruppo */
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+  display: block;
+  color: #222;
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 16px;
+  color: #222;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* Reset CSS 끝 */
+
+@media screen and (min-width:0px) and (max-width: 320px){
+  section > h2 >p{
+    width: 300px;
+  }
+  section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    margin: 0 10px;
+  }
+  .bodywrap{
+    margin:0 auto;
+  }
+
+  .bodywrap .login-img{
+    display: none;
+  }
+  form{
+    width: 300px;
+    margin: 0 10px;
+  }
+  form .user-id{
+    margin-right: 39.5px;
+    margin-top: 1px;
+    font-size: 22px;
+  }
+  form .id input{
+    border-radius: 5px;
+    width: 180px;
+    height: 27.5px;
+    margin-bottom: 8px;
+  }
+  form .pw{
+    margin-bottom: 10px;
+  }
+  form .user-pw{
+    margin-right: 20px;
+    margin-top: 1px;
+    font-size: 22px;
+  }
+  form .pw input{
+    border-radius: 5px;
+    width: 180px;
+    height: 27.5px;
+    margin-bottom: 8px;
+  }
+  form .login-btn{
+    width: 285px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+  }
+  form .rm{
+    margin-bottom: 10px;
+  }
+  .rm .re-id{
+    margin-right: 20px;
+  }
+  .membership{
+    float: left;
+    width: 150px;
+  }
+  .membership .ms-a{
+    width: 80px;
+  }
+  .find{
+    float: left;
+  }
+  .find .find-a{
+    width: 120px;
+    margin-right: 25px;
+  }
+  .sp-lg{
+    width: 280px;
+  }
+  .sp-lg h2{
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+  
+  .sp-lg-1{
+    width: 280px;
+  }
+  .kakao{
+    float: left;
+    width: 50px;
+    margin-left: 90px;
+    margin-right: 50px;
+  }
+  .naver{
+    float: left;
+    width: 80px;
+  }
+
+}

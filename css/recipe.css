@@ -1,0 +1,568 @@
+@charset "uft-8";
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #222;
+}
+body {
+  overflow-x: hidden;
+  background-color: white;
+  font-size: 16px;
+  /* 결과값은 16px × 1.25 → 20px 
+    font-size: 1.25rem;
+    font-size와 관계없이 결과값은 16px × 1.5 → 24px
+    padding: 1.5rem;*/
+}
+
+/* header */
+header {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+.login {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 1280px;
+  height: 40px;
+  padding: 0 10px;
+  margin: 0 auto;
+  line-height: 40px;
+}
+.login>ul>li {
+  float: left;
+  color: #aaa;
+  margin-right: 25px;
+}
+.login>ul>li>a {
+  font-size: .8rem;
+  color: #aaa;
+}
+.login input {
+  width: 150px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.login button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+}
+.menu {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #eee;
+}
+.menu-box {
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  max-width: 100%;
+  width: 1280px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+.logo>img {
+  width: 200px;
+  height: 100%;
+}
+.menu-box i {
+  height: 50px;
+  font-size: 1.5rem;
+  line-height: 50px;
+  cursor: pointer;
+}
+#menu-slide {
+  margin: 0 auto;
+}
+#menu-slide>li {
+  float: left;
+  width: 100px;
+  line-height: 50px;
+  text-align: center;
+}
+#menu-slide>li>a:hover {
+  font-weight: 500;
+}
+#submenu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid lightgray;
+  border-top: 0;
+}
+#submenu>li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100px;
+  padding: 10px 5px;
+  line-height: normal;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#submenu>li:hover>a {
+  font-weight: 700;
+}
+#subsubmenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  z-index: 1;
+  border: 1px solid lightgray;
+}
+#subsubmenu>li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 10px 5px;
+  line-height: normal;
+  font-size: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#subsubmenu>li:hover {
+  font-weight: 700;
+}
+.toggle {
+  display: none;
+  /* z-index: 1;
+    position: absolute;
+    top:90px;
+    right: 0;
+    width: 100%; */
+}
+.toggle.active {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 100%;
+}
+.toggleView {
+  display: flex;
+  flex-flow: wrap row;
+  overflow: auto;
+  max-width: 1280px;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 0;
+}
+.toggleView>li {
+  width: 25%;
+  padding: 10px 0;
+}
+.toggleView>li>a {
+  font-size: .9rem;
+  font-weight: bold;
+  text-align: center;
+}
+.toggleView>li li {
+  width: 100%;
+  padding: 10px 0;
+  font-size: .8rem;
+  text-align: center;
+}
+.toggleView>li li>a {
+  color: gray;
+  font-weight: 300;
+}
+.toggleView>li li>a:hover {
+  font-weight: bold;
+}
+
+
+/****** 지금주문언제출발 ******/
+.delivery {
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap column;
+  margin: 0 auto;
+  position: fixed;
+  right: 1%;
+  bottom: 1%;
+}
+
+.delivery_p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap column;
+  color: orange;
+  font-size: 0.7rem;
+  display: none;
+}
+
+.delivery_inner {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border: 0.5px solid orange;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap column;
+  margin-top: 5px;
+}
+
+.delivery_inner>img {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+}
+
+.delivery:hover .delivery_p:not(:hover) {
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap column;
+  color: orange;
+  font-size: 0.7rem;
+}
+
+/* 레시피 리스트 */
+.recipe-wrap {
+  display: flex;
+  flex-flow: wrap row;
+  width: 1280px;
+  margin: 50px auto;
+}
+.recipe-box {  
+  display: flex;
+  flex-flow: wrap column;
+
+  /* width: 370px; */
+  width: 25%;
+  height: 318px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+.recipe-box a {
+  border: 1px solid #000;
+  width: 100%;
+}
+.recipe-box .thumb {
+  /* width: 100%; */
+}
+.recipe-box .thumb img {
+  width: 100%;
+  height: auto;
+}
+.recipe-box .title {
+  
+}
+.recipe-box p:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+/****** PC ******/
+@media all and (min-width:1280px) {
+
+  /*************** choose ***************/
+  .choose {
+    width: 800px;
+    margin: 30px auto;
+  }
+
+  .choose>h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+  }
+
+  .choose>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 70%;
+    justify-content: space-between;
+  }
+
+  .choose>ul>li:hover {
+    font-weight: bold;
+  }
+
+  /*************** contanier ***************/
+  #contanier {
+    margin: 0 auto;
+    width: 1280px;
+    height: max-content;
+  }
+
+  #contanier>div {
+    width: 930px;
+    height: max-content;
+    padding: 50px 20px;
+    margin: 0 auto;
+  }
+
+  /***** 표지/닉네임 *****/
+  /*.show {
+        background-color: rgba(0, 255, 255, 0.172);
+    }*/
+  .info {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: 30px auto;
+  }
+
+  .thumpnail {
+    width: max-content;
+    margin: 30px auto;
+  }
+
+  .thumpnail>h2 {
+    margin-top: 50px;
+  }
+
+  .thumpnail>img {
+    margin: 40px auto 0 auto;
+  }
+
+  /***** 레시피에 사용된 제품 *****/
+  /* .title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+  } */
+  .title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: #f9d1b1;
+    border-radius: 10px;
+    width: max-content;
+    padding: 2px 13px;
+    cursor: pointer;
+  }
+
+  .pro_scroll {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    display: none;
+  }
+
+  .pro_scroll.active {
+    display: flex;
+  }
+
+  #up {
+    display: none;
+  }
+
+  .pro_wrap {
+    margin: 20px 40px;
+  }
+
+  .pro_img {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .pro_wrap>p {
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .price {
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    padding: 0 10px;
+    font-weight: bold;
+  }
+
+  .ori_price {
+    color: lightgrey;
+    margin-right: 10px;
+  }
+
+  .sale_price {
+    color: brown;
+  }
+
+  .pro_sub-wrap {
+    display: flex;
+    width: 100px;
+    height: 25px;
+    justify-content: space-between;
+  }
+
+  .pro_sub-wrap>input {
+    width: 30px;
+    height: 25px;
+    text-align: center;
+  }
+
+  .pro_sub-wrap>button {
+    width: 30px;
+    height: 25px;
+  }
+
+  .sort {
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fa-solid {
+    text-align: center;
+    height: 10px;
+  }
+
+  .pro_sub-wrap>button {
+    width: 30px;
+    height: 25px;
+  }
+
+  /***** 레시피 내용 *****/
+  .contents {
+    /*background-color: rgba(216, 112, 147, 0.158);*/
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+  }
+
+  .contents>img {
+    margin: 20px auto 10px auto;
+  }
+
+  .contents>div {
+    display: flex;
+  }
+
+  .contents>div>img {
+    width: 50%;
+    margin: 5px;
+  }
+
+  .contents>p {
+    margin: 10px auto;
+  }
+
+  iframe {
+    margin: 40px auto;
+  }
+
+  /***** 댓글창 *****/
+  hr {
+    height: 1px;
+    border: 0;
+    background: lightgray;
+  }
+  .comment {
+    /*background-color: rgba(135, 207, 235, 0.146);*/
+    border-top: 1px solid lightgray;
+  }
+
+  .com_wrap {
+    width: max-content;
+    height: max-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: end;
+  }
+
+  .com_wrap>input {
+    width: 690px;
+    height: 90px;
+  }
+
+  .com_wrap>i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .com_sub-wrap {
+    width: 740px;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .com_text {
+    margin: 10px 20px;
+    padding: 10px;
+  }
+
+  .date {
+    color: gray;
+    margin-bottom: 10px;
+  }
+
+  .com_sub-wrap>button {
+    padding: 0 10px;
+  }
+
+  .heart {
+    float: right;
+    background-color: white;
+    border: none;
+    transform: translateY(0);
+    cursor: pointer;
+  }
+  .heart:hover {
+    animation: upDown 1s infinite;
+  }
+  .heart i {
+    font-size: 20px;
+  }
+  .comment>a {
+    width: max-content;
+    height: max-content;
+  }
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

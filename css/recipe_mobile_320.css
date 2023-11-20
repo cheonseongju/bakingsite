@@ -1,0 +1,273 @@
+@charset "uft-8";
+
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+ul, ol, li{
+    list-style: none;
+}
+body {
+    overflow-x :  hidden;
+    background-color: white;
+    font-size: 16px;
+    /* 결과값은 16px × 1.25 → 20px 
+    font-size: 1.25rem;
+    font-size와 관계없이 결과값은 16px × 1.5 → 24px
+    padding: 1.5rem;*/
+}
+
+
+/****** MOBILE ******/
+/*그리드시스템 *규칙 / 280(양 옆 여백 각 20 씩)*/
+@media all and (min-width:500px) and (max-width:767px) {
+    .header {
+        max-height: 80px;
+        min-height: 40px;
+        height: 10vw;
+        padding: 0;
+    }
+    .header_inner {
+        padding: 0 5%;
+        max-height: 80px;
+        min-height: 40px;
+        height: 10vw;
+    }
+    #logo {
+        width: 50%;
+        max-width: 240px;
+    }
+    .header_inner>ul {
+        display: none;
+    }
+    #hambuger {
+        font-size: 30px;
+        text-align: center;
+        display: block;
+    }
+
+/*************** choose ***************/
+    .choose {
+        width: 100%;
+        margin: 3% auto;
+    }
+    .choose>h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3% auto;
+    }
+    .choose>ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        width: 80%;
+        justify-content: space-between;
+    }
+    .choose>ul>li:hover {
+        font-weight: bold;
+    }
+/*************** contanier ***************/
+    #contanier {
+        /*background: pink;*/
+        margin: 0 20px;
+        height: max-content;
+    }
+    #contanier>div {
+        width: 100%;
+        height: max-content;
+        padding: 5% 0;
+        margin: 0 auto;
+    }
+/***** 표지/닉네임 *****/
+    .show {
+        /*background-color: rgba(0, 255, 255, 0.172);*/
+        display: flex;
+        flex-flow: wrap column;
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .thumpnail {
+        width: 100%;
+        max-width: 580px;
+        margin: 30px auto;
+        display: flex;
+        flex-flow: wrap column;
+        justify-content: center;
+    }
+    .thumpnail>h2 {
+        margin-top: 20px;
+    }
+    .thumpnail>img {
+        width: 100%;
+        max-width: 580px;
+        margin-top: 20px;
+    }
+    /***** 레시피에 사용된 제품 *****/
+    /*.product {
+        background-color: rgba(137, 43, 226, 0.24);
+    }*/
+    .title {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .pro_scroll{
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+        display: none;
+    }
+    .pro_scroll.active {
+        display: flex;
+    }
+    #up {
+        display: none;
+    }
+    .pro_wrap {
+        margin: 20px 40px;
+    }
+    .pro_img {
+        width: 100px;
+        height: 100px;
+        background-color: lightgray;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .pro_wrap>p {
+        text-align: center;
+        margin: 10px auto;
+    }
+    .price {
+        display: flex;
+        margin: 10px auto;
+        justify-content: center;
+        padding: 0 10px;
+        font-weight: bold;
+    }
+    .ori_price{
+        color: lightgrey;
+        margin-right: 10px;
+    }
+    .sale_price{
+        color: brown;
+    }
+    .pro_sub-wrap {
+        display: flex;
+        width: 100px;
+        height: 25px;
+        justify-content: space-between;
+    }
+    .pro_sub-wrap>input {
+        width: 30px;
+        height: 25px;
+        text-align: center;
+    }
+    .pro_sub-wrap>button {
+        width: 30px;
+        height: 25px;
+    }
+    .sort {
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .fa-solid {
+        text-align: center;
+        height: 10px;
+    }
+    .pro_sub-wrap>button {
+        width: 30px;
+        height: 25px;
+    }
+    /***** 레시피 내용 *****/
+    .contents {
+        /*background-color: rgba(216, 112, 147, 0.158);*/
+        display: flex;
+        flex-flow: wrap column;
+        align-items: center;
+        width: 100%;
+    }
+    .contents>img {
+        width: 100%;
+        max-width: max-content;
+        margin: 20px auto 10px auto;
+    }
+    .contents>div {
+        display: flex;
+        width: 100%;
+    }
+    .contents>div>img {
+        width: 50%;
+    }
+    .contents>p {
+        margin: 10px auto;
+    }
+    iframe {
+        width: 100%;
+        max-width: 580px;
+        margin: 40px auto;
+    }
+    /***** 댓글창 *****/
+    .comment {
+        /*background-color: rgba(135, 207, 235, 0.146);*/
+        border-top: 1px solid gray;
+    }
+    .com_wrap {
+        width: 100%;
+        height: max-content;
+        margin: 0 auto;
+        display: flex;
+        align-items: end;
+    }
+    .com_wrap>input {
+        width: 100%;
+        height: 12vw;
+    }
+    .com_wrap>i {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .com_sub-wrap {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px 10px 10px 10px;
+    }
+    .com_text {
+        margin: 10px 20px;
+        padding: 10px;
+    }
+    .date {
+        color: gray;
+        margin-bottom: 10px;
+    }
+    .com_sub-wrap>button {
+        padding: 0 10px;
+    }
+    .heart {
+        float: right;
+        background-color: white;
+        border: none;
+    }
+    .comment>a {
+        width: max-content;
+        height: max-content;
+    }
+    /*************** footer ***************/
+    footer {
+        background-color: lightgray;
+        width: 100%;
+        height: max-content;
+        text-align: center;
+    }
+}

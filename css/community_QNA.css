@@ -1,0 +1,7 @@
+/* QNA 목록 */
+.item {
+  font-size: 14px;
+  border-bottom: 1px dotted black;
+  line-height: 40px;
+  background-color: #FFF4E5 !important;
+}

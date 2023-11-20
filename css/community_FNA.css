@@ -1,0 +1,41 @@
+
+
+.FNA {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  margin-bottom: 50px;
+}
+
+
+/* 아코디언 메뉴 시작  */
+.FNA-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 40px;
+}
+
+.collapsible{
+  background-color: #FFF4E5;
+  color: gray;
+  cursor: pointer;
+  padding: 18px;
+  border: 3px solid  #fff;
+  text-align: left;
+  outline: none;
+  /* font-size: 18px; */
+  font-weight: bold;
+
+}
+.FNA-content{
+  height: auto;
+  padding: 0 18px;
+  overflow: hidden;
+  /* background-color: rgb(247, 243, 241); */
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.FNA-content>p{
+  padding: 20px;
+}

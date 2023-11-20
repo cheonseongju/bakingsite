@@ -1,0 +1,212 @@
+@media screen and (min-width: 500px)and (max-width: 767px) {
+
+header {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+.login {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    margin: 0 auto;
+    line-height: 40px;
+}
+.login>ul>li {
+    float: left;
+    color: #aaa;
+    margin-right: 3vw;
+}
+.login>ul>li>a {
+    font-size: 0.7rem;
+    color: #aaa;
+}
+.login input {
+    max-width: 150px;
+    width: 40vw;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.login button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+
+.menu {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #eee;
+}
+.menu-box {
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+.logo img{
+    width: 25vw;
+    min-width: 140px;
+}
+.menu-box i {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    height: 50px;
+    font-size: 1.5rem;
+    line-height: 50px;
+}
+#menu-slide {
+    display: none;
+}
+
+section {
+    overflow: hidden;
+    width: 100%;
+}
+.choose {
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    padding: 15px;
+}
+.choose>div {
+    width: 100%;
+    height: auto;
+}
+.choose>div>h3 {
+    width: max-content;
+    margin: 0 auto;
+}
+.choose>div>ul {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    max-width: 550px;
+    margin: 15px auto;
+}
+.choose>div>ul>li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.9rem;
+    margin: 0 15px;
+}
+.choose>div>ul>li:hover {
+    font-weight: 500;
+}
+
+.product {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.product>ul {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+.product>ul>li {
+    padding: 0 1.5vw;
+    font-size: .8rem;
+}
+.product>ul>li:hover{
+    font-weight: 500;
+}
+.product>div {
+    display: flex;
+    flex-flow: wrap row;
+    width: 88vw;
+    margin: 50px auto;
+}
+.pd-box {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    overflow: hidden;
+    width: 20vw;
+    margin: 3vw 1vw;
+}
+.thumb {
+    overflow: hidden;
+    width: 100%;
+    height: 20vw;
+    margin-bottom: 10px;
+    /* border: 1px solid black; */
+}
+.thumb>img {
+    width: 100%;
+    height: 20vw;
+}
+.thumb>img:hover {
+    animation: thumb 0.5s both;
+}
+@keyframes thumb {
+    from{ transform: scale(1);}
+    to{
+        transform: scale(1.3);
+    }
+}
+.pd-box>p {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    height: 2.4rem;
+    font-size: .8rem;
+    text-align: center;
+}
+.pd-box>span {
+    width: 20vw;
+    border-top: 1px solid lightgray;
+    text-align: center;
+}
+.pd-box>span p{
+    height: 2.4rem;
+    font-size: .8rem;
+}
+.pd-box>span>p:first-child {
+    color: #ccc;
+}
+.pd-box>span>p:last-child {
+    color: rgb(200, 0, 0);
+    font-size: .8rem;
+    font-weight: bold;
+}
+.pd-box>span del {
+    font-weight: 300;
+    color: lightgray;
+    margin-right: 10px;
+}
+
+.page {
+    width: max-content;
+    height: 150px;
+    line-height: 150px;
+    margin: 0 auto;
+}
+.page>ul {
+    display: flex;
+    flex-flow: wrap row;
+}
+.page>ul>li {
+    padding: 0 10px;
+}
+.page i {
+    color: lightgray;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    border-top: 1px solid lightgray;
+}
+
+}
