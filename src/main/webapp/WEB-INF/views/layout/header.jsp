@@ -7,35 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bakingschool</title>
     <!-- favicon -->
-    <link rel="shortcut icon" href="resources/images/favi/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="static/images/favi/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="static/images/favi/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="static/images/favi/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="static/images/favi/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="static/images/favi/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="static/images/favi/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="static/images/favi/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="static/images/favi/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/images/favi/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="static/images/favi/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favi/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="static/images/favi/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/images/favi/favicon-16x16.png">
-    <link rel="manifest" href="static/images/favi/manifest.json">
+    <link rel="shortcut icon" href="/images/favi/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favi/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favi/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favi/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favi/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favi/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favi/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favi/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favi/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favi/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favi/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favi/favicon-16x16.png">
+    <link rel="manifest" href="/images/favi/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="static/images/favi/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/images/favi/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/header.css" type="text/css">
-    <link rel="stylesheet" href="static/css/footer.css" type="text/css">
-    <link rel="stylesheet" href="static/css/style.css" type="text/css">
-    <link rel="stylesheet" href="static/css/map.css" type="text/css">
-    <script src="static/js/jquery-1.12.3.js"></script>
-    <script src="static/js/index_header.js" defer></script>
-    <script src="static/js/index_mainslide.js" defer></script>
+    <link rel="stylesheet" href="/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/css/footer.css" type="text/css">
+    <link rel="stylesheet" href=/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/map.css" type="text/css">
+    <script src="/js/jquery-1.12.3.js"></script>
+    <script src="/js/index_header.js" defer></script>
+    <script src="/js/index_mainslide.js" defer></script>
 </head>
 <body>
 
@@ -58,7 +58,7 @@
         <ul class="top-inner">
             <li>
                 <a href="#" class="delivery-modal">
-                    <img src="resources/images/icon/delivery_icon.png" alt="deliveryicon">
+                    <img src="/images/delivery_icon.png" alt="deliveryicon">
                     지금 주문하면 언제출발?
                 </a>
             </li>
@@ -84,10 +84,10 @@
         <div class="header-inner">
             <div class="logo-wrap">
                 <a href="/" class="logo">
-                    <img src="resources/images/icon/logo.png" alt="로고">
+                    <img src="/images/icon/logo.png" alt="로고">
                 </a>
                 <a href="/" class="logo-mobile">
-                    <img src="resources/images/icon/logo_m.png" alt="로고">
+                    <img src="/images/icon/logo_m.png" alt="로고">
                 </a>
             </div>
             <nav class="main-menu">
