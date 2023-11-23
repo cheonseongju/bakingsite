@@ -63,12 +63,12 @@
                 <label for="password" class="user-pw">비밀번호</label>
                 <input name="password" type="password" id="user-pw" placeholder="비밀번호를 입력해주세요.">
               </div>
-                <c:if test="${not empty loginErrorMsg}">
-                    <p class="error">${loginErrorMsg}</p>
-                </c:if>
               <div class="btn">
                 <button class="login-btn">로그인</button>
               </div>
+                <c:if test="${not empty loginErrorMsg}">
+                    <p class="error">${loginErrorMsg}</p>
+                </c:if>
             </div>
             <div class="rm">
               <input name="remember" type="checkbox" id="remember-id">
@@ -79,14 +79,14 @@
             <div class="user-menu">
 
               <div class="ms-user">
-                <p class="membership">
-                  <button type="button" onclick="location.herf='/user/new'">
-                  <a href="#" class="ms-a">
-                    <i class="fa-solid fa-user"></i>
-                    회원가입
-                  </a>
-                  </button>
-                </p>
+                <button type="button" onclick="location.href='/user/new'">
+                    <p class="membership">
+                      <a href="#" class="ms-a">
+                        <i class="fa-solid fa-user"></i>
+                        회원가입
+                      </a>
+                    </p>
+                </button>
               </div>
               <div class="fn-user">
                 <p class="find">
