@@ -64,7 +64,34 @@
             </li>
             <li class="top-util">
                 <div class="login-wrap">
-                    <a href="${pageContext.request.contextPath}/user/login">로그인</a>
+
+                <c:if test="${pageContext.request.isUserInRole('ROLE_ADMIN')}">
+                     <li class="nav-item">
+                        <a class="nav-link" href="/admin/item/new">상품 등록</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="/admin/items">상품 관리</a>
+                     </li>
+                </c:if>
+
+                <c:if test="${pageContext.request.userPrincipal != null}">
+                    <li class="nav-item">
+                       <a class="nav-link" href="/cart">장바구니</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="/orders">구매이력</a>
+                    </li>
+                </c:if>
+                    <c:if test="${pageContext.request.userPrincipal == null}">
+                       <li class="nav-item">
+                          <a class="nav-link" href="/user/login">로그인</a>
+                       </li>
+                    </c:if>
+                    <c:if test="${pageContext.request.userPrincipal != null}">
+                       <li class="nav-item">
+                          <a class="nav-link" href="/user/logout">로그아웃</a>
+                       </li>
+                    </c:if>
                     <a href="${pageContext.request.contextPath}/user/new">회원가입</a>
                     <a href="basket.html" class="shopping-cart">
                         <i class="fa-solid fa-basket-shopping"></i>
