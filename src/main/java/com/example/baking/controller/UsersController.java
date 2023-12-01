@@ -1,12 +1,16 @@
 package com.example.baking.controller;
 
+import com.example.baking.details.PrincipalDetails;
 import com.example.baking.dto.UserFormDto;
 import com.example.baking.entity.Users;
+import com.example.baking.repository.UserRepository;
 import com.example.baking.service.MailService;
 import com.example.baking.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,10 +20,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping("/user")
 @RequiredArgsConstructor
 public class UsersController {
+    @Autowired
+    private UserRepository repository;
+
     private final UserService userService;
     private final PasswordEncoder passwordEncoder;
 
@@ -72,6 +81,51 @@ public class UsersController {
         String num = "" + number;
 
         return num;
+    }
+
+    // !!!! OAuth로 로그인 시 이 방식대로 하면 CastException 발생함
+    @GetMapping("/form/loginInfo")
+    @ResponseBody
+    public String formLoginInfo(Authentication authentication, @AuthenticationPrincipal PrincipalDetails principalDetails){
+
+        PrincipalDetails principal = (PrincipalDetails) authentication.getPrincipal();
+        String member = principal.getUsername();
+        System.out.println(member);
+
+        String user1 = principalDetails.getUsername();
+        System.out.println(user1);
+
+        return member.toString();
+    }
+
+
+    @GetMapping("/oauth/loginInfo")
+    @ResponseBody
+    public String oauthLoginInfo(Authentication authentication, @AuthenticationPrincipal OAuth2User oAuth2UserPrincipal){
+        OAuth2User oAuth2User = (OAuth2User) authentication.getPrincipal();
+        Map<String, Object> attributes = oAuth2User.getAttributes();
+        System.out.println(attributes);
+        // PrincipalOauth2UserService의 getAttributes내용과 같음
+
+        Map<String, Object> attributes1 = oAuth2UserPrincipal.getAttributes();
+        // attributes == attributes1
+
+        return attributes.toString();     //세션에 담긴 user가져올 수 있음
+    }
+
+
+    @GetMapping("/loginInfo")
+    @ResponseBody
+    public String loginInfo(Authentication authentication, @AuthenticationPrincipal PrincipalDetails principalDetails){
+        String result = "";
+
+        PrincipalDetails principal = (PrincipalDetails) authentication.getPrincipal();
+        if(principal.getName() == null) {
+            result = result + "Form 로그인 : " + principal;
+        }else{
+            result = result + "OAuth2 로그인 : " + principal;
+        }
+        return result;
     }
 
 }

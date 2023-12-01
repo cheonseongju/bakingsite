@@ -1,6 +1,9 @@
 package com.example.baking.security;
 
+import com.example.baking.service.PrincipalOauth2UserService;
+import com.example.baking.service.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -16,6 +19,11 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebSecurity
 @AllArgsConstructor
 public class SecurityConfig {
+    @Autowired
+    UserService userService;
+    @Autowired
+    private PrincipalOauth2UserService principalOauth2UserService;
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         http
@@ -28,6 +36,11 @@ public class SecurityConfig {
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/user/logout"))
                 .logoutSuccessUrl("/")
+                .and()                                  // OAuth
+                .oauth2Login()
+                .defaultSuccessUrl("/")
+                .userInfoEndpoint()                     // OAuth2 로그인 성공 후 가져올 설정들
+                .userService(principalOauth2UserService)  // 서버에서 사용자 정보를 가져온 상태에서 추가로 진행하고자 하는 기능 명시
                 .and()
                 .csrf().disable();
 
